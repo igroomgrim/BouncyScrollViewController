@@ -12,6 +12,7 @@
 		140AC34C1DC64DFA0067D2E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 140AC34A1DC64DFA0067D2E5 /* Main.storyboard */; };
 		140AC34E1DC64DFA0067D2E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140AC34D1DC64DFA0067D2E5 /* Assets.xcassets */; };
 		140AC3511DC64DFA0067D2E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 140AC34F1DC64DFA0067D2E5 /* LaunchScreen.storyboard */; };
+		984C848D1DD09FB9001A0DC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C848C1DD09FB9001A0DC5 /* ContentView.swift */; };
 		986256181DD08B2D001B819B /* BGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986256171DD08B2D001B819B /* BGView.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		140AC34D1DC64DFA0067D2E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		140AC3501DC64DFA0067D2E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		140AC3521DC64DFA0067D2E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		984C848C1DD09FB9001A0DC5 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		986256171DD08B2D001B819B /* BGView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 			children = (
 				140AC3481DC64DFA0067D2E5 /* ViewController.swift */,
 				986256171DD08B2D001B819B /* BGView.swift */,
+				984C848C1DD09FB9001A0DC5 /* ContentView.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			files = (
 				140AC3491DC64DFA0067D2E5 /* ViewController.swift in Sources */,
 				986256181DD08B2D001B819B /* BGView.swift in Sources */,
+				984C848D1DD09FB9001A0DC5 /* ContentView.swift in Sources */,
 				140AC3471DC64DFA0067D2E5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

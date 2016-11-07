@@ -12,7 +12,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var scrollView: UIScrollView!
     
-    let numberOfViews = 4
+    let numberOfViews = 3
+    
+    var startingXOffset: CGFloat = 0
+    var endingOffset: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +37,9 @@ class ViewController: UIViewController {
                 let view = BGView(frame: bgFrame, colors: [blue, green])
                 scrollView.addSubview(view)
             }
+            
+            let contentView = ContentView(frame: CGRect(x: xOrgin + 32, y: 64, width: self.view.frame.width - 64, height: self.view.frame.height - 128))
+            scrollView.addSubview(contentView)
         }
         
         scrollView.backgroundColor = green
@@ -50,10 +56,30 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UIScrollViewDelegate {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        startingXOffset = scrollView.contentOffset.x
+        print("scrollViewWillBeginDragging : \(startingXOffset)")
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let xOffset = scrollView.contentOffset.x
+        let dif = abs(startingXOffset - xOffset)
+        print("dif : \(dif)")
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        endingOffset = scrollView.contentOffset.x
+        let sizeWidth = scrollView.bounds.size.width
+        
+        print("scrollViewDidEndDragging : \(endingOffset)")
+    }
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let xOffset = scrollView.contentOffset.x
         let sizeWidth = scrollView.bounds.size.width
         pageControl.currentPage = Int(xOffset/sizeWidth)
+        
+        print("scrollViewDidEndDecelerating : \(xOffset)")
     }
 }
 
